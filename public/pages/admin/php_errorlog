@@ -1,0 +1,2 @@
+[30-May-2025 05:24:27 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/customer/www/nano-friend.com/public_html/public/pages/admin/dashboard.php on line 22
+[30-May-2025 05:24:27 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/customer/www/nano-friend.com/public_html/public/pages/admin/dashboard.php on line 22

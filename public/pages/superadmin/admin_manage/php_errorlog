@@ -1,0 +1,53 @@
+[23-May-2025 12:28:48 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/customer/www/nano-friend.com/public_html../includes/helpers.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/admin_manage/admins.php:4
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/admin_manage/admins.php on line 4
+[23-May-2025 12:28:50 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/customer/www/nano-friend.com/public_html../includes/helpers.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/admin_manage/admins.php:4
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/admin_manage/admins.php on line 4
+[23-May-2025 12:28:52 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/customer/www/nano-friend.com/public_html../includes/helpers.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/admin_manage/admins.php:4
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/admin_manage/admins.php on line 4
+[23-May-2025 12:28:52 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/customer/www/nano-friend.com/public_html../includes/helpers.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/admin_manage/admins.php:4
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/admin_manage/admins.php on line 4
+[23-May-2025 12:28:53 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/customer/www/nano-friend.com/public_html../includes/helpers.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/admin_manage/admins.php:4
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/admin_manage/admins.php on line 4
+[23-May-2025 12:28:53 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/customer/www/nano-friend.com/public_html../includes/helpers.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/admin_manage/admins.php:4
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/admin_manage/admins.php on line 4
+[23-May-2025 12:29:06 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/customer/www/nano-friend.com/public_html../includes/helpers.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/admin_manage/admins.php:4
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/admin_manage/admins.php on line 4
+[23-May-2025 12:29:22 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/customer/www/nano-friend.com/public_html../includes/helpers.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/admin_manage/admins.php:4
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/admin_manage/admins.php on line 4
+[23-May-2025 12:29:50 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/customer/www/nano-friend.com/public_html../includes/helpers.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/admin_manage/admins.php:4
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/admin_manage/admins.php on line 4
+[23-May-2025 12:30:02 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/customer/www/nano-friend.com/public_html../includes/helpers.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/admin_manage/admins.php:4
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/admin_manage/admins.php on line 4
+[23-May-2025 12:30:12 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/customer/www/nano-friend.com/public_html../includes/helpers.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/admin_manage/admins.php:4
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/admin_manage/admins.php on line 4
+[23-May-2025 12:30:21 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/customer/www/nano-friend.com/public_html../includes/helpers.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/admin_manage/admins.php:4
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/admin_manage/admins.php on line 4
+[23-May-2025 12:32:25 UTC] PHP Warning:  require_once(/home/customer/www/nano-friend.com/public_html../includes/helpers.php): Failed to open stream: No such file or directory in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/admin_manage/admins.php on line 7
+[23-May-2025 12:32:25 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/customer/www/nano-friend.com/public_html../includes/helpers.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/admin_manage/admins.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/admin_manage/admins.php on line 7

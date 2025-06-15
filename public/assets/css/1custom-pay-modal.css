@@ -1,0 +1,57 @@
+public/assets/css/custom-pay-modal.css
+
+/* กำหนดความสูง/ความกว้างของ modal-dialog ของเรา */
+.modal-xl {
+  max-width: 1000px; /* ปรับความกว้างตามต้องการ (ระบุ px หรือ %) */
+}
+
+/* ลด padding บางส่วนให้ช่องฟอร์มดูแน่นขึ้น */
+#paymentModal .form-label {
+  font-size: 0.95rem;
+}
+#paymentModal .form-control,
+#paymentModal .form-control:focus,
+#paymentModal .btn {
+  font-size: 0.95rem;
+}
+
+/* เพิ่ม border/focus สีสันใน Dark/Light Theme */
+html[data-bs-theme="dark"] #paymentModal .form-control {
+  background-color: #2a2a2a !important;
+  color: #f1f1f1 !important;
+  border: 1px solid #444 !important;
+}
+html[data-bs-theme="light"] #paymentModal .form-control {
+  background-color: #ffffff;
+  color: #212529;
+  border: 1px solid #ced4da;
+}
+
+/* เปลี่ยนสีพื้นหลัง modal-content ให้ใส่คีย์เฉพาะ theme */
+html[data-bs-theme="dark"] #paymentModalContent {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+}
+html[data-bs-theme="light"] #paymentModalContent {
+  background-color: #ffffff;
+  color: #212529;
+}
+
+/* ปรับสีปุ่ม เพื่อให้ดูสวยพอสมควร */
+#paymentModal .btn-outline-secondary {
+  min-width: 100px;
+}
+#paymentModal .btn-primary {
+  min-width: 100px;
+}
+
+/* ปรับปุ่ม “ปิดยอดค้างทั้งหมด” ให้มีความโดดเด่น */
+#paymentModal #btnCloseBalance {
+  font-weight: 500;
+}
+
+/* เมื่อ modal เปิด ให้ scrollable เฉพาะตัว body ของ modal */
+#paymentModal .modal-body {
+  max-height: 60vh;
+  overflow-y: auto;
+}

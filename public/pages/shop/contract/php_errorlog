@@ -1,0 +1,3 @@
+[25-May-2025 12:44:11 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/customer/www/nano-friend.com/public_html/public/pages/shop/contract/print-contract.php on line 210
+[25-May-2025 12:49:18 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/customer/www/nano-friend.com/public_html/public/pages/shop/contract/print-contract.php on line 210
+[06-Jun-2025 13:16:23 Asia/Bangkok] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/customer/www/nano-friend.com/public_html/public/pages/shop/contract/edit_contract.php on line 789

@@ -1,0 +1,126 @@
+/* =========================================================================
+   custom-pay-modal.css
+   – Override สีของตารางและ modal-content ตาม html[data-theme]
+   ========================================================================= */
+
+/* =========================================================================
+   4) ปรับสีของ Label และ Input readonly ใน Section A (Modal)
+   ========================================================================= */
+
+/* เมื่อเป็น Light Theme */
+html[data-theme="light"] .modal-content .form-label.text-muted {
+  color: #6c757d !important;  /* สีเทาเข้มเล็กน้อย ตาม Bootstrap ปกติ */
+}
+html[data-theme="light"] .modal-content input[readonly] {
+  background-color: #ffffff !important;
+  color: #212529         !important;
+  border-color: #dee2e6  !important;
+}
+
+/* เมื่อเป็น Dark Theme */
+html[data-theme="dark"] .modal-content .form-label.text-muted {
+  color: #cfcfe0 !important;  /* เลือกสีเทาอ่อนให้เห็นชัดบนพื้นเข้ม */
+}
+html[data-theme="dark"] .modal-content input[readonly] {
+  background-color: #2a2a3f !important;  /* พื้นเข้มเหมือนตาราง */
+  color: #e0e0e0            !important;  /* ตัวหนังสืออ่อนให้มองเห็น */
+  border-color: #3a3a4f     !important;  /* เส้นขอบอ่อนกว่าเล็กน้อย */
+}
+
+
+/* ================================
+   2) เมื่อเป็น Dark Theme
+   ================================ */
+html[data-theme="dark"] .table,
+html[data-theme="dark"] .table th,
+html[data-theme="dark"] .table td {
+  background-color: #2a2a3f !important;
+  color: #e0e0e0       !important;
+  border-color: #3a3a4f !important;
+}
+
+html[data-theme="dark"] .table thead th {
+  background-color: #23232f !important;
+  color: #ffffff       !important;
+}
+
+html[data-theme="dark"] .table-hover tbody tr:hover {
+  background-color: #34344a !important;
+}
+
+/* หากใช้ DataTables และมี paginate buttons */
+html[data-theme="dark"] .dataTables_wrapper .dataTables_paginate .paginate_button {
+  background-color: #2a2a3f !important;
+  color: #e0e0e0       !important;
+  border: 1px solid #3a3a4f !important;
+}
+html[data-theme="dark"] .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+  background-color: #34344a !important;
+}
+
+/* ปรับ input ของ DataTables ให้เข้าธีมด้วย */
+html[data-theme="light"] .dataTables_filter input {
+  background-color: #ffffff !important;
+  color: #212529          !important;
+  border: 1px solid #dee2e6 !important;
+}
+html[data-theme="dark"] .dataTables_filter input {
+  background-color: #23232f !important;
+  color: #e0e0e0          !important;
+  border: 1px solid #3a3a4f !important;
+}
+
+/* ================================
+   3) ปรับสีของ .modal-content ตามธีม
+   ================================ */
+/* Light Theme → Modal สีอ่อน, ข้อความสีเข้ม */
+html[data-theme="light"] .modal-content {
+  background-color: #ffffff !important;
+  color: #212529         !important;
+}
+
+/* Dark Theme → Modal พื้นเข้ม, ข้อความสีอ่อน */
+html[data-theme="dark"] .modal-content {
+  background-color: #2a2a3f !important;
+  color: #e0e0e0       !important;
+}
+
+/* ปรับ header / footer ของ modal ให้เข้ากับธีม */
+html[data-theme="light"] .modal-header,
+html[data-theme="light"] .modal-footer {
+  background-color: #ffffff !important;
+  color: #212529         !important;
+}
+html[data-theme="dark"] .modal-header,
+html[data-theme="dark"] .modal-footer {
+  background-color: #23232f !important;
+  color: #e0e0e0       !important;
+}
+
+/* ถ้าต้องการขอบ modal ใน Dark Theme ให้อ่อนกว่าเล็กน้อย */
+html[data-theme="dark"] .modal-content {
+  border: 1px solid #3a3a4f !important;
+}
+
+/* custom-backdrop ให้ทึบครึ่งหนึ่ง และอยู่ใต้ modal */
+.custom-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1040;
+}
+#viewPaymentModal .modal-content {
+  z-index: 1050; /* อยู่เหนือ backdrop */
+}
+
+/* ใช้ backdrop ของ Bootstrap แต่งให้ทึบขึ้น และเบลอข้างหลัง */
+.modal-backdrop.show {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  backdrop-filter: blur(2px);
+}
+/* เพิ่มเงาให้ modal-content ให้โดดเด่นขึ้น */
+.modal.show .modal-content {
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  border: 2px solid #0d6efd; /* ขอบสีน้ำเงินเข้ม ตาม Bootstrap primary */
+}
+

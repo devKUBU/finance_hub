@@ -1,0 +1,314 @@
+/* ---------- THEME VARIABLES ------------------------------ */
+:root {
+  --color-bg-primary:   #f4f6f9;
+  --color-bg-secondary: #ffffff;
+  --color-text-primary: #333333;
+  --color-text-secondary: #555555;
+  --color-border:       #e0e0e0;
+  --color-accent:       #4e73df;
+  --color-link:         #4e73df;
+  --color-link-hover:   #2e59d9;
+  --radius:             0.25rem;
+  --transition-fast:    0.2s ease-in-out;
+}
+
+[data-theme="dark"] {
+  --color-bg-primary:   #1e1e2f;
+  --color-bg-secondary: #2a2a3f;
+  --color-text-primary: #e0e0e0;
+  --color-text-secondary:#c1c1c1;
+  --color-border:       #3a3a4f;
+  --color-accent:       #7a6aff;
+  --color-link:         #7a6aff;
+  --color-link-hover:   #5f52ea;
+}
+
+/* ---------- RESET & BASE --------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Prompt', sans-serif;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ---------- TYPOGRAPHY ----------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-text-primary);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: var(--color-text-secondary);
+}
+
+/* ---------- LINKS ---------------------------------------- */
+a {
+  color: var(--color-link);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+a:hover {
+  color: var(--color-link-hover);
+}
+
+/* ---------- CONTAINERS ----------------------------------- */
+.container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* ---------- NAVBAR / HEADER ------------------------------ */
+.navbar {
+  background-color: var(--color-bg-secondary);
+  border-bottom: 1px solid var(--color-border);
+  padding: 0.5rem 1rem;
+}
+
+.navbar .nav-item + .nav-item {
+  margin-left: 1rem;
+}
+
+/* ====================== SIDEBAR IMPROVED ====================== */
+.sidebar {
+  background-color: var(--color-bg-secondary);
+  border-right: 1px solid var(--color-border);
+  width: 260px;
+  position: fixed;
+  top: 0; bottom: 0; left: 0;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Logo + ชื่อแอป */
+.sidebar .sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+.sidebar .sidebar-brand img {
+  height: 32px;
+}
+.sidebar .sidebar-brand span {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+/* เมนูรายการ */
+.sidebar .nav-link {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  color: var(--color-text-secondary);
+  border-radius: var(--radius);
+  margin-bottom: 0.5rem;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+.sidebar .nav-link i {
+  margin-right: 0.75rem;
+  font-size: 1.125rem;
+}
+
+/* Hover / Active */
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+}
+.sidebar .nav-link.active {
+  background-color: var(--color-accent);
+  color: #fff;
+}
+
+/* ปรับ main-content หลัง Sidebar */
+.main-content {
+  margin-left: 260px;                        /* เลื่อนขวาให้พ้น Sidebar */
+  padding: 2rem 1rem;
+}
+
+/* ---------- CARDS ----------------------------------------- */
+.card {
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  transition: box-shadow var(--transition-fast);
+}
+.card:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* ---------- BUTTONS --------------------------------------- */
+.btn {
+  display: inline-block;
+  font-weight: 500;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.btn-primary {
+  background-color: var(--color-accent);
+  color: #fff;
+  border: none;
+}
+.btn-primary:hover {
+  background-color: var(--color-link-hover);
+}
+
+/* ---------- TABLES ---------------------------------------- */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+}
+.table th,
+.table td {
+  padding: 0.75rem;
+  border: 1px solid var(--color-border);
+  text-align: left;
+}
+.table thead {
+  background-color: var(--color-bg-secondary);
+}
+
+/* ---------- FORM ELEMENTS -------------------------------- */
+.form-group {
+  margin-bottom: 1rem;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.form-control {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text-primary);
+  transition: border-color var(--transition-fast);
+}
+.form-control:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+/* ---------- FOOTER ---------------------------------------- */
+.footer {
+  background-color: var(--color-bg-secondary);
+  border-top: 1px solid var(--color-border);
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}
+
+/* ---------- RESPONSIVE ----------------------------------- */
+@media (max-width: 768px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .main-content {
+    margin-left: 0;
+  }
+}
+
+/* Theme Toggle Button */
+.btn-toggle {
+  background: none;
+  border: none;
+  color: var(--color-text-primary);
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+.btn-toggle:hover {
+  color: var(--color-accent);
+}
+
+/* ─── Theme-aware Table Styling ────────────────────────── */
+.table.activity-log {
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text-primary);
+}
+
+.table.activity-log th,
+.table.activity-log td {
+  border-color: var(--color-border);
+}
+
+.table.activity-log thead {
+  background-color: var(--color-bg-secondary);
+}
+
+.table.activity-log tbody tr {
+  background-color: var(--color-bg-primary);
+  transition: background var(--transition-fast);
+}
+
+.table.activity-log tbody tr:nth-child(odd) {
+  background-color: var(--color-bg-secondary);
+}
+
+.table.activity-log tbody tr:hover {
+  background-color: var(--color-accent);
+  color: #fff;
+}
+
+.table.activity-log a {
+  color: var(--color-link);
+}
+.table.activity-log a:hover {
+  color: var(--color-link-hover);
+}
+
+/* ธีม: สี placeholder ให้ใช้ตัวแปร --text-sub */
+.form-control::placeholder {
+  color: var(--text-sub) !important;
+  opacity: 1; /* ให้แน่ใจว่ามองเห็นได้เต็มที่ */
+}
+/* vendor prefixes ถ้าต้องการรองรับเก่า */
+.form-control::-webkit-input-placeholder {
+  color: var(--text-sub) !important;
+}
+.form-control::-moz-placeholder {
+  color: var(--text-sub) !important;
+  opacity: 1;
+}
+.form-control:-ms-input-placeholder {
+  color: var(--text-sub) !important;
+}
+.form-control:-moz-placeholder {
+  color: var(--text-sub) !important;
+  opacity: 1;
+}

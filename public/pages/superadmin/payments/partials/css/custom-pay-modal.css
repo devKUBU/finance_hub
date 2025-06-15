@@ -1,0 +1,44 @@
+/* File: public/pages/superadmin/payments/partials/css/custom-pay-modal.css */
+
+/* ปรับสไตล์พื้นฐานของ Modal ให้สวยงาม */
+.modal-content {
+  border-radius: 0.75rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.modal-header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.modal-body {
+  background-color: #ffffff;
+}
+
+.modal-footer {
+  background-color: #f8f9fa;
+  border-top: 1px solid #dee2e6;
+}
+
+/* ปรับปุ่ม Close ให้อยู่ในธีม */
+.modal-header .btn-close {
+  filter: invert(0.4);
+}
+
+/* เมื่อเปิด Dark Mode (data-theme="dark") */
+[data-theme="dark"] .modal-content {
+  background-color: #343a40;
+  color: #e9ecef;
+}
+[data-theme="dark"] .modal-header,
+[data-theme="dark"] .modal-footer {
+  background-color: #343a40;
+  color: #e9ecef;
+  border-color: #454d55;
+}
+
+.modal-backdrop.show {
+  background-color: rgba(0, 0, 0, 0.705); /* ปรับความมืดได้ */
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(50px);
+}

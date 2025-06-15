@@ -1,0 +1,70 @@
+/* ---------- GLOBAL THEME VARIABLES --------------------------- */
+:root{
+  /* Dark (ดีฟอลต์) */
+  --bg-grad:        linear-gradient(135deg,#3E3B92 0%,#20204A 50%,#0E0E24 100%);
+  --glass-bg:       rgba(255,255,255,0.16);
+  --input-bg:       rgba(255,255,255,0.18);
+  --input-bg-focus: rgba(255,255,255,0.28);
+  --text-main:      #ffffff;
+  --text-sub:       rgba(255,255,255,.8);
+  --card-shadow:    0 12px 40px rgba(0,0,0,.45);
+  --btn-grad:       linear-gradient(135deg,#746bff 0%,#1f1cff 100%);
+}
+[data-theme="light"]{
+  --bg-grad:        linear-gradient(135deg,#f6f7fc 0%,#e6e8f3 100%);
+  --glass-bg:       rgba(255,255,255,0.85);
+  --input-bg:       rgba(0,0,0,0.05);
+  --input-bg-focus: rgba(0,0,0,0.08);
+  --text-main:      #20204A;
+  --text-sub:       #555;
+  --card-shadow:    0 8px 24px rgba(0,0,0,.15);
+  --btn-grad:       linear-gradient(135deg,#4d6aff 0%,#2343ff 100%);
+}
+
+/* ---------- ฟอนต์ & รีเซ็ตเบื้องต้น ----------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400&display=swap');
+body{margin:0;font-family:'Prompt',sans-serif;font-weight:300;color:var(--text-main);}
+
+/* ---------- Footer ใช้ได้ทุกหน้า --------------------------- */
+.site-footer{
+  font-size:.85rem;
+  color:var(--text-sub);
+  text-align:center;
+  padding:1rem 0;
+  letter-spacing:.3px;
+  text-shadow:0 1px 2px rgba(0,0,0,.4);
+  background:transparent;
+  margin-top:auto;
+}
+
+/* ---------- ปุ่ม Gradient + Spinner (ใช้ซ้ำได้) ------------- */
+.btn-gradient{
+  position:relative;overflow:hidden;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;gap:.5rem;
+  height:46px;min-width:150px;padding:0 1.8rem;
+  border:none;border-radius:12px;
+  background:var(--btn-grad);
+  color:#fff;font-size:.92rem;font-weight:400;
+  transition:transform .15s,box-shadow .15s,opacity .15s;
+}
+.btn-gradient:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.3)}
+.btn-gradient:active{transform:translateY(0);box-shadow:none}
+.btn-gradient::after{
+  content:'';position:absolute;inset:0;background:rgba(255,255,255,.25);
+  border-radius:inherit;transform:scale(0);opacity:0;
+  transition:transform .4s,opacity .4s;
+}
+.btn-gradient:active::after{transform:scale(3);opacity:0;transition:0s}
+.spinner{
+  width:18px;height:18px;border:3px solid rgba(255,255,255,.35);
+  border-top-color:#fff;border-radius:50%;animation:spin .8s linear infinite;
+  display:none;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+.btn-gradient.loading{cursor:default;pointer-events:none;opacity:.85}
+.btn-gradient.loading .spinner{display:block}
+.btn-gradient.loading .btn-text::after{content:'กำลังเข้าสู่ระบบ…';margin-left:.35rem}
+
+/* ---------- ฟังก์ชันช่วยจัด layout ------------------------- */
+.page-flex{min-height:100vh;display:flex;flex-direction:column}
+.flex-grow-1{flex-grow:1}

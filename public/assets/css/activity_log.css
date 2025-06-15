@@ -1,0 +1,147 @@
+/* ──────────────────────────────────────────────────────────
+   Activity Log Table — รองรับ Dark / Light Theme
+────────────────────────────────────────────────────────── */
+
+/* 0) เตรียมให้ตารางเลื่อนได้แนวนอน */
+.table-responsive {
+  overflow-x: auto;
+}
+
+/* 1) โครงหลักของตาราง activity-log */
+table.activity-log {
+  width: 100%;
+  border-radius: .5rem;
+  overflow: hidden;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+/* 2) หัวตาราง & เซลล์ */
+table.activity-log th,
+table.activity-log td {
+  padding: .75rem 1rem;
+  font-weight: 300;
+  vertical-align: middle;
+}
+
+/* 3) แถวหัวตาราง */
+table.activity-log thead th {
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* ──────────────────────────────────────────────────────────
+   Light Theme Styles
+────────────────────────────────────────────────────────── */
+[data-theme="light"] table.activity-log,
+body:not([data-theme="dark"]) table.activity-log {
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  color: #212529;
+}
+
+[data-theme="light"] table.activity-log th,
+[data-theme="light"] table.activity-log td,
+body:not([data-theme="dark"]) table.activity-log th,
+body:not([data-theme="dark"]) table.activity-log td {
+  border-bottom: 1px solid #dee2e6;
+  color: #495057;
+}
+
+[data-theme="light"] table.activity-log thead th,
+body:not([data-theme="dark"]) table.activity-log thead th {
+  background-color: #f8f9fa;
+  border-bottom: 2px solid #6c757d;
+  color: #212529;
+}
+
+[data-theme="light"] table.activity-log tbody tr:nth-of-type(odd),
+body:not([data-theme="dark"]) table.activity-log tbody tr:nth-of-type(odd) {
+  background-color: #f8f9fa !important;
+}
+
+[data-theme="light"] table.activity-log tbody tr:nth-of-type(even),
+body:not([data-theme="dark"]) table.activity-log tbody tr:nth-of-type(even) {
+  background-color: #ffffff !important;
+}
+
+[data-theme="light"] table.activity-log tbody tr:hover,
+body:not([data-theme="dark"]) table.activity-log tbody tr:hover {
+  background-color: #e9ecef !important;
+}
+
+[data-theme="light"] table.activity-log a,
+body:not([data-theme="dark"]) table.activity-log a {
+  color: #0d6efd;
+}
+
+[data-theme="light"] table.activity-log a:hover,
+body:not([data-theme="dark"]) table.activity-log a:hover {
+  color: #0a58ca;
+}
+
+/* ──────────────────────────────────────────────────────────
+   Dark Theme Styles
+────────────────────────────────────────────────────────── */
+[data-theme="dark"] table.activity-log {
+  background-color: #1a1a1a;
+  border: 1px solid #333333;
+  color: #e9ecef;
+}
+
+[data-theme="dark"] table.activity-log th,
+[data-theme="dark"] table.activity-log td {
+  border-bottom: 1px solid #333333;
+  color: #adb5bd;
+}
+
+[data-theme="dark"] table.activity-log thead th {
+  background-color: #212529;
+  border-bottom: 2px solid #6c757d;
+  color: #e9ecef;
+}
+
+[data-theme="dark"] table.activity-log tbody tr:nth-of-type(odd) {
+  background-color: #2d3338 !important;
+}
+
+[data-theme="dark"] table.activity-log tbody tr:nth-of-type(even) {
+  background-color: #1a1a1a !important;
+}
+
+[data-theme="dark"] table.activity-log tbody tr:hover {
+  background-color: #495057 !important;
+}
+
+[data-theme="dark"] table.activity-log a {
+  color: #6ea8fe;
+}
+
+[data-theme="dark"] table.activity-log a:hover {
+  color: #9ec5fe;
+}
+
+/* ──────────────────────────────────────────────────────────
+   Responsive Design
+────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  table.activity-log th,
+  table.activity-log td {
+    padding: .5rem .75rem;
+    font-size: 0.875rem;
+  }
+  
+  table.activity-log th:nth-child(n+5),
+  table.activity-log td:nth-child(n+5) {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  table.activity-log th:nth-child(n+4),
+  table.activity-log td:nth-child(n+4) {
+    display: none;
+  }
+}

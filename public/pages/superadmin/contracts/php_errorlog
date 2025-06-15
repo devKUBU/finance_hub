@@ -1,0 +1,74 @@
+[30-May-2025 20:50:18 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function displayFlash() in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/contracts/list-contracts-admin.php:53
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/contracts/list-contracts-admin.php on line 53
+[30-May-2025 20:50:21 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function displayFlash() in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/contracts/list-contracts-admin.php:53
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/contracts/list-contracts-admin.php on line 53
+[30-May-2025 20:50:22 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function displayFlash() in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/contracts/list-contracts-admin.php:53
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/contracts/list-contracts-admin.php on line 53
+[30-May-2025 20:50:23 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function displayFlash() in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/contracts/list-contracts-admin.php:53
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/contracts/list-contracts-admin.php on line 53
+[31-May-2025 11:30:37 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function displayFlash() in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/contracts/list-contracts-admin.php:137
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/contracts/list-contracts-admin.php on line 137
+[31-May-2025 11:30:43 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function displayFlash() in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/contracts/list-contracts-admin.php:137
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/contracts/list-contracts-admin.php on line 137
+[31-May-2025 11:32:35 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function displayFlash() in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/contracts/list-contracts-admin.php:137
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/contracts/list-contracts-admin.php on line 137
+[31-May-2025 11:32:38 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function displayFlash() in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/contracts/list-contracts-admin.php:137
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/contracts/list-contracts-admin.php on line 137
+[31-May-2025 11:32:38 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function displayFlash() in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/contracts/list-contracts-admin.php:137
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/contracts/list-contracts-admin.php on line 137
+[31-May-2025 11:32:38 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function displayFlash() in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/contracts/list-contracts-admin.php:137
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/contracts/list-contracts-admin.php on line 137
+[31-May-2025 11:32:38 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function displayFlash() in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/contracts/list-contracts-admin.php:137
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/contracts/list-contracts-admin.php on line 137
+[31-May-2025 11:32:43 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function displayFlash() in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/contracts/list-contracts-admin.php:137
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/contracts/list-contracts-admin.php on line 137
+[31-May-2025 11:58:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function displayFlash() in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/contracts/list-contracts-admin.php:137
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/contracts/list-contracts-admin.php on line 137
+[31-May-2025 19:03:31 Asia/Bangkok] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/contracts/view-contract-admin.php on line 858
+[01-Jun-2025 13:36:07 Asia/Bangkok] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/contracts/view-contract-admin.php on line 858
+[01-Jun-2025 13:36:13 Asia/Bangkok] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/contracts/view-contract-admin.php on line 858
+[01-Jun-2025 13:36:16 Asia/Bangkok] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/contracts/view-contract-admin.php on line 858
+[01-Jun-2025 13:36:17 Asia/Bangkok] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/contracts/view-contract-admin.php on line 858
+[01-Jun-2025 13:36:17 Asia/Bangkok] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/contracts/view-contract-admin.php on line 858
+[01-Jun-2025 13:36:19 Asia/Bangkok] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/contracts/view-contract-admin.php on line 858
+[01-Jun-2025 13:36:19 Asia/Bangkok] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/contracts/view-contract-admin.php on line 858
+[01-Jun-2025 13:36:20 Asia/Bangkok] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/contracts/view-contract-admin.php on line 858
+[01-Jun-2025 13:36:20 Asia/Bangkok] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/contracts/view-contract-admin.php on line 858
+[01-Jun-2025 13:36:21 Asia/Bangkok] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/contracts/view-contract-admin.php on line 858
+[01-Jun-2025 13:36:21 Asia/Bangkok] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/contracts/view-contract-admin.php on line 858
+[01-Jun-2025 13:36:46 Asia/Bangkok] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/contracts/view-contract-admin.php on line 858
+[01-Jun-2025 13:41:49 Asia/Bangkok] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/contracts/view-contract-admin.php on line 858
+[02-Jun-2025 18:53:55 Asia/Bangkok] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/contracts/view-contract-admin.php on line 867
+[02-Jun-2025 18:56:54 Asia/Bangkok] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/contracts/view-contract-admin.php on line 867
+[03-Jun-2025 18:02:32 Asia/Bangkok] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/contracts/view-contract-admin.php on line 867
+[03-Jun-2025 18:27:59 Asia/Bangkok] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/contracts/view-contract-admin.php on line 876
+[06-Jun-2025 13:06:53 Asia/Bangkok] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/contracts/view-contract-admin.php on line 867
+[12-Jun-2025 14:42:56 Asia/Bangkok] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/contracts/view-contract-admin.php on line 867
+[12-Jun-2025 14:43:07 Asia/Bangkok] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/contracts/view-contract-admin.php on line 867
+[14-Jun-2025 20:44:24 Asia/Bangkok] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/customer/www/nano-friend.com/public_html/public/pages/superadmin/contracts/view-contract-admin.php on line 868

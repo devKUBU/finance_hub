@@ -1,0 +1,190 @@
+/* File: public/assets/css/manage_payments.css */
+
+/* (1) สไตล์สำหรับการกระพริบ (Blink) */
+@keyframes blink {
+    0%, 100% { background-color: rgba(255, 0, 0, 0.1); }
+    50% { background-color: rgba(255, 0, 0, 0.3); }
+}
+.blink-overdue {
+    animation: blink 1s step-start 0s infinite;
+}
+@keyframes blink2 {
+    0%, 100% { background-color: rgba(255, 165, 0, 0.1); }
+    50% { background-color: rgba(255, 165, 0, 0.3); }
+}
+.blink-pending {
+    animation: blink2 1s step-start 0s infinite;
+}
+
+/* (2) สไตล์ status-paid (แถวที่ “จ่ายครบแล้ว” ไม่กระพริบ) */
+.status-paid {
+    background-color: #e8f5e9; /* สีเขียวอ่อน */
+}
+
+/* (3) ปรับตารางเล็กน้อย */
+#contractsTable th, 
+#contractsTable td {
+    vertical-align: middle;
+}
+
+/* เมื่อมีคลาส .masked จะซ่อนตัวเลข ด้วยการใส่พื้นหลังสีเดียวกับพื้น และทำให้ตัวเลขโปร่งใส */
+
+.masked {
+    filter: blur(4px);
+    user-select: none;
+}
+
+.stats-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;             /* ระยะห่างระหว่างกล่อง */
+  margin-bottom: 1.5rem;
+}
+
+.stat-box {
+  flex: 1 1 180px;       /* ยืดหยุ่นได้ ขั้นต่ำ 180px */
+  max-width: 220px;      /* ไม่ให้กว้างเกิน */
+  padding: 1.25rem;
+  border: .5px solid #f8f9fa;
+  border-radius: 0.75rem;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.stat-box .icon {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.stat-box .label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.stat-box .value {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.stat-box .note {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+/* ยืดให้ profit-box เต็มความกว้าง สังเกตง่าย */
+.stats-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+
+.profit-box {
+  flex: 0 1 360px;          /* ความกว้างขั้นต่ำ 360px ขยายได้เล็กน้อย */
+  max-width: 360px;         /* ไม่ให้กว้างเกิน 360px */
+  padding: 1.5rem;          /* ลด padding ลงนิดหน่อย */
+  border-width: 2px;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  text-align: center;
+  font-size: 1.25rem;       /* ลดขนาดฟอนต์ลงเล็กน้อย */
+  margin: 0 auto;           /* กึ่งกลางในแถว */
+}
+
+/* กรณีกำไรเป็นบวก */
+.profit-box.positive {
+  border-color: #28a745;
+  background-color: rgba(40,167,69,0.1);
+  color: #28a745;
+}
+
+/* กรณีขาดทุน */
+.profit-box.negative {
+  border-color: #dc3545;
+  background-color: rgba(220,53,69,0.1);
+  color: #dc3545;
+}
+
+/* ภายในกล่อง profit เพิ่มความหนาให้ไอค่อน */
+.profit-box .icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ===========================
+   Styles for Profit/Loss Banner
+   =========================== */
+.profit-banner {
+  max-width: 360px;
+  margin: 0 auto 1.5rem;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  overflow: hidden;
+}
+.profit-banner .banner-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.profit-banner .banner-icon {
+  font-size: 2rem;
+  margin-right: 0.75rem;
+}
+.profit-banner .banner-text {
+  flex: 1;
+}
+.profit-banner .banner-label {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.profit-banner .banner-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.profit-banner .banner-msg {
+  font-size: 0.875rem;
+  opacity: 0.85;
+  margin-top: 0.25rem;
+}
+.profit-banner .banner-cartoon {
+  width: 48px;
+  height: 48px;
+  margin-left: 0.75rem;
+}
+
+/* Profit (เขียว) */
+.profit-banner.profit {
+  background: rgba(40, 167, 69, 0.1);
+  border: 2px solid #28a745;
+  color: #28a745;
+}
+
+/* Loss (แดง) พร้อมแอนิเมชันสั่นเล็กน้อย) */
+@keyframes shake {
+  0%,100% { transform: translateX(0) }
+  20%,60% { transform: translateX(-1px) }
+  40%,80% { transform: translateX(1px) }
+}
+.profit-banner.loss {
+  background: rgba(220, 53, 69, 0.1);
+  border: 2px solid #dc3545;
+  color: #dc3545;
+  animation: shake 0.8s infinite;
+}
+
+.stats-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;  /* จัดแต่ละแถวให้อยู่กึ่งกลาง */
+  gap: 1rem;                /* ระยะห่างระหว่างกล่อง */
+}
+
+/* กำหนดให้แต่ละกล่องขนาดยืดหยุ่นได้ขั้นต่ำ 15rem */
+.stat-box {
+  flex: 1 1 15rem;          /* flex-grow:1; flex-shrink:1; flex-basis:15rem; */
+  max-width: 1fr;           /* หรือจะไม่ใส่ max-width ก็ได้ ปล่อยให้ flex-basis คุม */
+}

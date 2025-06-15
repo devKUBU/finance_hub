@@ -1,0 +1,57 @@
+/* Sidebar background */
+.sidebar {
+  background-color: #2c2c3e;
+  height: 100vh;
+  color: #ccc;
+}
+
+/* เมนูทั้งหมดใช้ flex+gap */
+.sidebar-nav .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;           /* ระยะไอคอน–ข้อความ */
+  padding: 0.75rem 1rem;  /* บน/ล่าง 0.75rem, ซ้าย/ขวา 1rem */
+  color: inherit;
+  transition: background-color .2s, color .2s;
+}
+
+/* Active / Hover */
+.sidebar-nav .nav-link:hover,
+.sidebar-nav .nav-link.active {
+  background-color: rgba(255,255,255,0.1);
+  color: #fff;
+}
+
+/* ไอคอน inherits สีข้อความ */
+.sidebar-nav .nav-link > i {
+  font-size: 1rem;
+}
+
+/* Chevron-down อยู่ขวาสุด */
+.sidebar-nav .nav-item > .nav-link.d-flex {
+  justify-content: space-between;
+}
+
+/* เมนูย่อย ใช้ padding เดียวกับหลัก */
+.sidebar-nav .collapse .nav-link {
+  padding-left: 1rem;
+  font-size: 0.95rem;
+}
+
+/* ไอคอนเล็กในเมนูย่อย */
+.sidebar-nav .collapse .nav-link i.fa-angle-right {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+/* ปรับ scroll bar ถ้ามี */
+.sidebar-nav {
+  overflow-y: auto;
+}
+.sidebar-nav::-webkit-scrollbar {
+  width: 6px;
+}
+.sidebar-nav::-webkit-scrollbar-thumb {
+  background-color: rgba(255,255,255,0.2);
+  border-radius: 3px;
+}

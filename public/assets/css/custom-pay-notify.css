@@ -1,0 +1,70 @@
+/* เพิ่มไฟล์ CSS ใหม่ (custom-pay-notify.css) หรือแทรกใน <style> */
+@keyframes blink-red {
+  0%, 100% { background-color: rgba(255, 0, 0, 0.2); }
+  50%      { background-color: transparent; }
+}
+@keyframes blink-yellow {
+  0%, 100% { background-color: rgba(255, 255, 0, 0.3); }
+  50%      { background-color: transparent; }
+}
+
+/* สถานะเกินกำหนด: พื้นหลังกระพริบแดง */
+.blink-overdue {
+  animation: blink-red 1s steps(2, start) infinite;
+}
+
+/* สถานะจ่ายยังไม่ครบ: พื้นหลังกระพริบเหลือง */
+.blink-pending {
+  animation: blink-yellow 1s steps(2, start) infinite;
+}
+
+/* สถานะจ่ายครบแล้ว สีเขียวขุ่น (คงที่) */
+.status-paid {
+  background-color: rgba(0, 128, 0, 0.1);
+}
+
+/* สถานะปิดยอดแล้ว สีเทาขุ่น (คงที่) */
+.status-closed {
+  background-color: rgba(128, 128, 128, 0.1);
+}
+
+
+.blink-notify {
+  animation: pulse-highlight 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse-highlight {
+  0% {
+    filter: brightness(1);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  50% {
+    filter: brightness(1.2);
+    /* เพิ่มเงาสีอ่อนๆ เพื่อดึงสายตา */
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+  }
+  100% {
+    filter: brightness(1);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+/* เฉพาะสถานะ “ครบกำหนดวันนี้” ใช้เงาสีเหลือง */
+.blink-pending {
+  animation: pulse-highlight-warning 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse-highlight-warning {
+  0% {
+    filter: brightness(1);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  50% {
+    filter: brightness(1.2);
+    box-shadow: 0 0 15px rgba(255, 193, 7, 0.3); /* แสงเหลือง */
+  }
+  100% {
+    filter: brightness(1);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+}

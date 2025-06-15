@@ -1,0 +1,519 @@
+/* =========================================================================
+   dashboard.css — Full Flat & Responsive Skin for Superadmin & Shop Manage
+   ========================================================================= */
+
+/* =========================================================================
+   0) COLOR VARIABLES
+   ========================================================================= */
+:root {
+  /* Accent & semi-transparent hover */
+  --color-accent:         #4e73df;
+  --color-accent-rgb:     78, 115, 223;
+
+  /* Light theme palette */
+  --color-bg-primary:     #f4f6f9;
+  --color-bg-secondary:   #ffffff;
+  --color-text-primary:   #333333;
+  --color-text-secondary: #555555;
+  --color-border:         #e0e0e0;
+  --color-link:           #6a6c72;
+  --color-link-hover:     #2e59d9;
+
+  /* Radius & transition */
+  --radius:               0.5rem;
+  --transition-fast:      0.2s ease-in-out;
+}
+
+/* =========================================================================
+   0.1) DARK THEME VARIABLE OVERRIDES
+   ========================================================================= */
+[data-theme="dark"] {
+  /* Accent & semi-transparent hover */
+  --color-accent:         #7a6aff;
+  --color-accent-rgb:     122, 106, 255;
+
+  /* Dark theme palette */
+  --color-bg-primary:     #1e1e2f;
+  --color-bg-secondary:   #2a2a3f;
+  --color-text-primary:   #e0e0e0;
+  --color-text-secondary: #c1c1c1;
+  --color-border:         #3a3a4f;
+  --color-link:           #a2a2a8;
+  --color-link-hover:     #858398;
+}
+
+/* === Dark Mode: Card Overrides === */
+[data-theme="dark"] .card {
+  background-color: var(--color-bg-secondary) !important;
+  border: 1px solid var(--color-border) !important;
+  color: var(--color-text-primary) !important;
+}
+
+[data-theme="dark"] .card-header {
+  background-color: var(--color-bg-primary) !important;
+  border-bottom: 1px solid var(--color-border) !important;
+  color:            var(--color-text-primary) !important;
+}
+
+[data-theme="dark"] .card-body {
+  background-color: var(--color-bg-secondary) !important;
+  color:            var(--color-text-primary) !important;
+}
+
+/* =========================================================================
+   1) GLOBAL RESET
+   ========================================================================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: 'Prompt', sans-serif;
+  line-height: 1.5;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+/* =========================================================================
+   2) SIDEBAR  (desktop collapse, mobile slide)
+   ========================================================================= */
+.sidebar {
+  position: fixed;
+  top: 0; left: 0; bottom: 0;
+  width: 240px;
+  background: var(--color-bg-secondary);
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: width .3s, transform .3s;
+  z-index: 1000;
+}
+
+/* scrollable nav */
+.sidebar-nav {
+  flex: 1;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.sidebar-nav::-webkit-scrollbar {
+  width: 0; height: 0;
+}
+
+/* collapse */
+.sidebar.collapsed {
+  width: 60px;
+}
+.sidebar.collapsed .sidebar-brand span,
+.sidebar.collapsed .nav-link span {
+  display: none;
+}
+.sidebar.collapsed .nav-link {
+  justify-content: center;
+}
+
+/* brand */
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  margin-bottom: 2rem;
+}
+.sidebar-brand img {
+  height: 32px;
+}
+.sidebar-brand span {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+/* links */
+.sidebar .nav-link {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  padding: .6rem 1rem;
+  color: var(--color-text-secondary);
+  border-radius: .375rem;
+  transition: background var(--transition-fast), color var(--transition-fast);
+  white-space: nowrap;
+}
+.sidebar .nav-link i {
+  width: 20px;
+  text-align: center;
+  font-size: 1.1rem;
+}
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+/* =========================================================================
+   3) MAIN CONTENT & HEADER
+   ========================================================================= */
+.main-content {
+  margin-left: 240px;
+  padding: 2rem 1.5rem;
+  min-height: 100vh;
+  transition: margin-left .3s;
+}
+.main-content.sidebar-collapsed {
+  margin-left: 60px;
+}
+
+/* header */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .75rem 2rem;
+  gap: .5rem;
+}
+.header-title {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--color-text-primary);
+}
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.btn-icon {
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  color: var(--color-text-primary);
+  cursor: pointer;
+}
+
+/* =========================================================================
+   4) STATS GRID
+   ========================================================================= */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.stat-item {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.25rem 1rem;
+  text-align: center;
+  transition: border-color var(--transition-fast), background var(--transition-fast);
+}
+.stat-item:hover {
+  border-color: var(--color-accent);
+  background: rgba(var(--color-accent-rgb), 0.05);
+}
+.stat-item i {
+  font-size: 1.75rem;
+  color: var(--color-accent);
+  margin-bottom: .5rem;
+}
+.stat-item .label {
+  font-size: .9rem;
+  color: var(--color-text-secondary);
+  margin-bottom: .25rem;
+}
+.stat-item .value {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+/* =========================================================================
+   5) SHOP-MANAGE TABLE
+   ========================================================================= */
+.table-shop-manage {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  font-size: .875rem;
+  font-weight: 300;
+}
+.table-shop-manage thead {
+  background: var(--color-accent);
+}
+.table-shop-manage thead th {
+  color: #fff;
+  padding: .75rem 1rem;
+  text-transform: uppercase;
+  font-size: .8rem;
+}
+.table-shop-manage tbody tr {
+  background: var(--color-bg-secondary);
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+.table-shop-manage tbody tr:hover {
+  background: rgba(var(--color-accent-rgb), 0.15);
+  color: #fff;
+}
+.table-shop-manage th,
+.table-shop-manage td {
+  padding: .6rem 1rem;
+  border: none;
+  vertical-align: middle;
+}
+.table-shop-manage .badge {
+  font-size: .75rem;
+  font-weight: 500;
+}
+.table-shop-manage .action-btn {
+  background: transparent;
+  border: none;
+  padding: .25rem;
+  font-size: 1rem;
+  color: var(--color-accent);
+  transition: color var(--transition-fast);
+}
+.table-shop-manage .action-btn:hover {
+  color: var(--color-link-hover);
+}
+/* rounded corners */
+.table-shop-manage thead th:first-child {
+  border-top-left-radius: var(--radius);
+}
+.table-shop-manage thead th:last-child {
+  border-top-right-radius: var(--radius);
+}
+.table-shop-manage tbody tr:last-child td:first-child {
+  border-bottom-left-radius: var(--radius);
+}
+.table-shop-manage tbody tr:last-child td:last-child {
+  border-bottom-right-radius: var(--radius);
+}
+
+/* =========================================================================
+   6) MOBILE ADJUSTMENTS (<768px)
+   ========================================================================= */
+@media (max-width: 768px) {
+  /* sidebar slide */
+  .sidebar { transform: translateX(-100%); }
+  .sidebar.show { transform: translateX(0); }
+  #sidebarToggle { display: inline-block; }
+
+  /* main full width */
+  .main-content,
+  .main-content.sidebar-collapsed {
+    margin-left: 0 !important;
+    padding: 1rem !important;
+  }
+
+  /* header compact */
+  .app-header {
+    flex-direction: row;
+    justify-content: center;
+    padding: .5rem 1rem;
+  }
+  .header-title { font-size: 1rem; }
+
+  /* stats single column */
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* table-shop-manage compact */
+  .table-shop-manage thead th,
+  .table-shop-manage th,
+  .table-shop-manage td {
+    padding: .4rem .6rem;
+    font-size: .8rem;
+  }
+}
+
+/* =========================================================================
+   7) SCROLLBAR RESET (optional)
+   ========================================================================= */
+.sidebar-nav {
+  -ms-overflow-style: none;  /* IE10+ */
+  scrollbar-width: none;     /* Firefox */
+}
+.sidebar-nav::-webkit-scrollbar {
+  width: 0; height: 0;       /* Chrome/Safari */
+}
+
+/* =========================================================================
+   8) DARK MODE COMPONENT OVERRIDES
+   ========================================================================= */
+[data-theme="dark"] .table,
+[data-theme="dark"] .table th,
+[data-theme="dark"] .table td {
+  background-color: var(--color-bg-secondary) !important;
+  color:            var(--color-text-primary)  !important;
+}
+[data-theme="dark"] .table thead {
+  background-color: var(--color-accent) !important;
+  color:            #fff            !important;
+}
+[data-theme="dark"] .table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: var(--color-bg-primary) !important;
+}
+[data-theme="dark"] .table-striped > tbody > tr:nth-of-type(even) {
+  background-color: var(--color-bg-secondary) !important;
+}
+[data-theme="dark"] ::placeholder {
+  color: var(--color-text-secondary) !important;
+}
+
+/* กำหนดตัวแปรสีสำหรับ preview text */
+:root {
+  --preview-muted-light: #6c757d;
+  --preview-muted-dark : #aaa;
+}
+
+/* default = light */
+.preview-format {
+  color: var(--preview-muted-light) !important;
+}
+
+/* เมื่อเป็น dark theme */
+[data-theme="dark"] .preview-format {
+  color: var(--preview-muted-dark) !important;
+}
+
+/* ====== Summary Tiles ====== */
+.summary-tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
+  gap:1rem;
+  margin-bottom:2rem;
+}
+.summary-tiles .tile {
+  background: var(--card);
+  border:1px solid var(--border);
+  border-radius:.5rem;
+  padding:1rem;
+  display:flex;
+  align-items:center;
+  gap:1rem;
+}
+.summary-tiles .tile .icon {
+  font-size:1.8rem;
+  color: var(--icon);
+}
+.summary-tiles .tile .info {
+  flex:1;
+}
+.summary-tiles .tile .info .label {
+  font-size:.9rem;
+  color: var(--text);
+  opacity:.7;
+}
+.summary-tiles .tile .info .value {
+  font-size:1.4rem;
+  font-weight:600;
+  color: var(--text);
+}
+
+/* ====== Finance Table ====== */
+.finance-wrapper {
+  margin-bottom:2rem;
+}
+.finance-table {
+  width:100%;
+  max-width: 420px;
+}
+.finance-table th, .finance-table td {
+  padding:.6rem 1rem;
+  border-bottom:1px solid var(--border);
+}
+.finance-table th {
+  width:60%;
+  font-weight:500;
+  color: var(--text);
+  opacity:.8;
+}
+.finance-table td {
+  text-align:right;
+  font-weight:600;
+  color: var(--text);
+}
+
+/* ====== Payment Status Bars ====== */
+.status-wrapper {
+  margin-bottom:2rem;
+}
+.status-wrapper .status-item {
+  background: var(--card);
+  border:1px solid var(--border);
+  border-radius:.5rem;
+  padding:.8rem 1rem;
+  margin-bottom:1rem;
+}
+.status-wrapper .status-item .label {
+  display:flex;
+  justify-content:space-between;
+  font-size:.9rem;
+  margin-bottom:.4rem;
+}
+.status-wrapper .status-item .progress {
+  height:.6rem;
+  border-radius:.3rem;
+  overflow:hidden;
+}
+
+/* Override Bootstrap .text-muted ให้ใช้ตัวแปรธีม */
+.text-muted {
+  color: var(--text) !important;
+  opacity: 0.6 !important;
+}
+
+/* หรือจะสร้างคลาสใหม่ชื่อ .theme-muted ก็ได้ */
+.theme-muted {
+  color: var(--text);
+  opacity: 0.6;
+  font-size: 0.85rem;
+}
+
+/* =========================================================================
+   9) CUSTOM COMPONENT OVERRIDES (ส่วนที่เพิ่มเข้ามาใหม่)
+   ========================================================================= */
+
+/* กำหนดสไตล์ให้ card-footer ให้ปรับตามธีม */
+.card-footer {
+    background-color: var(--color-bg-primary, #f8f9fa) !important;
+    border-top: 1px solid var(--color-border, #dee2e6) !important;
+}
+
+/* กำหนดสีตัวอักษรของส่วนสรุปรายการให้ปรับตามธีม */
+.card-footer #pagination-summary {
+    color: var(--color-text-secondary, #6c757d) !important;
+}
+
+/* ทำให้ปุ่ม pagination ปรับตามธีม (สำหรับ Dark Mode) */
+[data-theme="dark"] .page-link {
+    background-color: var(--color-bg-secondary);
+    border-color: var(--color-border);
+    color: var(--color-link);
+}
+
+[data-theme="dark"] .page-item.active .page-link {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    color: #fff;
+}
+
+[data-theme="dark"] .page-item.disabled .page-link {
+    background-color: var(--color-bg-primary);
+    border-color: var(--color-border);
+    color: var(--color-text-secondary);
+    opacity: 0.6;
+}

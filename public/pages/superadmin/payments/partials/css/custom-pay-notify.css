@@ -1,0 +1,45 @@
+/* File: public/pages/superadmin/payments/partials/css/custom-pay-notify.css */
+
+/* กำหนดให้แถวกระพริบเมื่อ “เกินกำหนด” */
+@keyframes blinkOverdue {
+  0%   { background-color: rgba(255, 0, 0, 0.1); }
+  50%  { background-color: transparent; }
+  100% { background-color: rgba(255, 0, 0, 0.1); }
+}
+.blink-overdue {
+  animation: blinkOverdue 1s infinite;
+}
+
+/* กระพริบสีเหลืองเมื่อ “จ่ายยังไม่ครบ (due today)” */
+@keyframes blinkPending {
+  0%   { background-color: rgba(255, 193, 7, 0.2); }
+  50%  { background-color: transparent; }
+  100% { background-color: rgba(255, 193, 7, 0.2); }
+}
+.blink-pending {
+  animation: blinkPending 1s infinite;
+}
+
+/* สีเขียวถ้า “จ่ายครบแล้ว” (ไม่กระพริบ) */
+.status-paid {
+  background-color: rgba(40, 167, 69, 0.1);
+}
+
+/* custom-pay-notify.css */
+
+/* เอฟเฟ็กต์กระพริบบน .blink-notify */
+@keyframes blink {
+  0%   { opacity: 1; }
+  50%  { opacity: 0.2; }
+  100% { opacity: 1; }
+}
+
+.blink-notify {
+  animation: blink 1.5s infinite;
+}
+
+/* เว้นช่องว่างให้ alert ไม่ชนกับ header */
+.alert {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
